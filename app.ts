@@ -1,19 +1,31 @@
-let hobbies = ['cooking', 'swimming'];
-// console.log(typeof hobbies);
+class Person {
+	name: string;
+	private type: string;
+	protected age: number = 27;
 
-// type aliases
+	constructor(name: string, public username: string) {
+		this.name = name;
+	}
 
-type Complex = { data: number[]; output: (all: boolean) => number[] };
+	printAge() {
+		console.log('Age: ', this.age);
+	}
 
-let complex: Complex = {
-	data: [10, 12, 14],
-	output: function(all: boolean): number[] {
-		if (all) {
-			return this.data;
-		} else {
-			return [];
-		}
-	},
-};
+	setType(type: string) {
+		this.type = type;
+		console.log('Type: ', this.type);
+	}
 
-console.log(complex.output(true));
+	getType() {
+		return this.type;
+	}
+
+	getAge() {
+		return this.age;
+	}
+}
+
+const person = new Person('Andrii', 'andr');
+person.setType('my type');
+console.log(person.name, person.username, person.getAge(), person.getType());
+console.log(person);
