@@ -8,7 +8,11 @@ type Complex = { data: number[]; output: (all: boolean) => number[] };
 let complex: Complex = {
 	data: [10, 12, 14],
 	output: function(all: boolean): number[] {
-		return this.data;
+		if (all) {
+			return this.data;
+		} else {
+			return [];
+		}
 	},
 };
 
