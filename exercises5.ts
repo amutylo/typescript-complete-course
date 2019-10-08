@@ -24,16 +24,20 @@ car.accelerate(10);
 console.log(car.acceleration);
 
 // Exercise 2 - Two objects, based on each other ...
-class baseObject {
+class Base {
 	width: number = 0;
 	length: number = 0;
+}
 
+var base = new Base();
+
+class Rectangle extends Base {
 	calcSize() {
 		return this.width * this.length;
 	}
 }
 
-var rectangle = new baseObject();
+var rectangle = new Rectangle();
 rectangle.width = 5;
 rectangle.length = 2;
 console.log(rectangle.calcSize());
