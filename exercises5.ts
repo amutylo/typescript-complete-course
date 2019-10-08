@@ -29,8 +29,6 @@ class Base {
 	length: number = 0;
 }
 
-var base = new Base();
-
 class Rectangle extends Base {
 	calcSize() {
 		return this.width * this.length;
