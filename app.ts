@@ -1,31 +1,5 @@
-class Person {
-	name: string;
-	private type: string;
-	protected age: number = 27;
+import { PI, calculateCircumference } from './math/circle';
 
-	constructor(name: string, public username: string) {
-		this.name = name;
-	}
-
-	printAge() {
-		console.log('Age: ', this.age);
-	}
-
-	setType(type: string) {
-		this.type = type;
-		console.log('Type: ', this.type);
-	}
-
-	getType() {
-		return this.type;
-	}
-
-	getAge() {
-		return this.age;
-	}
-}
-
-const person = new Person('Andrii', 'andr');
-person.setType('my type');
-console.log(person.name, person.username, person.getAge(), person.getType());
-console.log(person);
+console.log(PI);
+console.log(calculateCircumference(10));
+// console.log(MyMath.calculateRectangle(3, 5));

@@ -8,8 +8,19 @@
 		/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Learning TypeScript</title>
-		<!-- <script src="app.js"></script> -->
-		<script src="exercises5.js"></script>
+		<script src="node_modules/systemjs/dist/system.js"></script>
 	</head>
-	<body></body>
+	<body>
+		<script>
+			SystemJS.config({
+				baseURL: '/',
+				packages: {
+					'/': {
+						defaultExtension: 'js',
+					},
+				},
+			});
+			SystemJS.import('app.js');
+		</script>
+	</body>
 </html>
